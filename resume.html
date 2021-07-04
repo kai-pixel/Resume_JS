@@ -1,4 +1,4 @@
-  
+ 
 <!DOCTYPE html>
 <html>
 
@@ -17,10 +17,20 @@ h1
             color:black;
             text-align:center;
 }
-p
+#p_1
+{
+            font-family:"Times New Roman";
+            font-size:30px;
+            font-Weight:Bold;
+}
+#p_2
 {
             font-family:"Times New Roman";
             font-size:20px;
+            font-Weight:Bold;
+            color:hsla(hue, saturation, lightness, alpha);
+            position:relative;
+            left: 1300px;
 }
 .polaroid {
   width: 250px;
@@ -50,16 +60,25 @@ button
     text-decoration: none;
     display: inline-block;
     font-size:12px;
+    font-Weight:Bold;
     width: 24%;
 
 }
 
-img { 
+#img_1 { 
     width: 10%;
     height: auto;
     opacity: 0.8;
     position:relative;
     border-radius: 50%;
+}
+
+#img_2 { 
+    width: 10%;
+    height: auto;
+    opacity: 0.8;
+    position:relative;
+    left: 1300px;
 }
 </style>
 
@@ -69,9 +88,9 @@ img {
 
 
 <div class="polaroid">
-    <img src="https://github.com/kai-pixel/Resume_JS/blob/main/photo.jpg?raw=true" alt="Photo for resume" style="width:100%">
+    <img id="img_1" src="https://github.com/kai-pixel/Resume_JS/blob/main/photo.jpg?raw=true" alt="Photo for resume" style="width:100%">
     <div class="container">
-      <p>Kai Zhong</p>
+      <p id="p_1">Kai Zhong</p>
     </div>
   </div>
 
@@ -272,6 +291,13 @@ function Hide_My_Kompetenzen()
 }
 
 </script>
+
+<div>
+    <img id="img_2" src="https://github.com/kai-pixel/Resume_JS/blob/main/ZK_QR_Vcard.png?raw=true" alt="Photo for resume" style="width:10%" >
+    <div class="container">
+      <p id="p_2"> Scan For Contact</p>
+    </div>
+  </div>
 
 
 </body>
