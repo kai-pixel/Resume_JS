@@ -1,36 +1,100 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Resume</title>
     <script>type="text/javascript" src =  "functions.js"</script>
 <head>
+
+<style>
+body
+{
+            background-color:gray;
+}
+h1
+{
+            color:black;
+            text-align:center;
+}
+p
+{
+            font-family:"Times New Roman";
+            font-size:20px;
+}
+.polaroid {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+.container {
+    position: center;
+}
+
+.center {
+    position: absolute;
+    left: 30%;
+    top: 10%;
+    width: 10%;
+    text-align: center;
+    font-size: 18px;
+	margin-top:-9px;
+}
+button 
+{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position: relative;
+}
+
+img { 
+    width: 10%;
+    height: auto;
+    opacity: 0.8;
+    position:relative;
+    border-radius: 50%;
+}
+</style>
+
 <body>
-
-<h1>Kai Zhong</h1>
-
-<p><img src="https://github.com/kai-pixel/Resume_JS/blob/main/photo.jpg?raw=true" alt="Photo for resume" width="180" height="180"></p>
 
 <h1>Ciao! Welcome to my resume</h1>
 
-<p><img src="https://github.com/kai-pixel/Resume_JS/blob/main/optim.png?raw=true" alt="Photo for resume" width="180" height="180"></p>
+
+<div class="polaroid">
+    <img src="https://github.com/kai-pixel/Resume_JS/blob/main/photo.jpg?raw=true" alt="Photo for resume" style="width:100%">
+    <div class="container">
+      <p>Kai Zhong</p>
+    </div>
+  </div>
 
 
-<button onclick="AI_And_Me()">AI and Me</button>
+
+
+
+
+<button onclick="AI_And_Me()">AI_And_Me</button>
 <button onclick="Hide_AI_And_Me()">Hide_AI_And_Me</button>
 
-<p><img src="https://github.com/kai-pixel/Resume_JS/blob/main/MessIng.jpg?raw=true" alt="Photo for resume" width="180" height="180"></p>
+
 
 <button onclick="My_Experience()">My Experience</button>
 <button onclick="Hide_My_Experience()">Hide_My_Experience</button>
 
-<p><img src="https://cdn.pixabay.com/photo/2016/05/01/21/28/university-ulm-1366014_1280.jpg" alt="Photo for resume" width="180" height="180"></p>
 
 <button onclick="My_Education()">My Education</button>
 <button onclick="Hide_My_Education()">Hide_My_Education</button>
 
-<p><img src="https://github.com/kai-pixel/Resume_JS/blob/main/kompetenz.jpg?raw=true" alt="Photo for resume" width="180" height="180"></p>
+
 <button onclick="My_Kompetenzen()">My Kompetenzen</button>
 <button onclick="Hide_My_Kompetenzen()">Hide_My_Kompetenzen</button>
+
+
 
 
 
@@ -74,9 +138,9 @@
 
 function AI_And_Me() 
 {
-
-    document.getElementById("PI").innerHTML = "Seit meinem Masterstudium beschäftige ich mich mit Deep Learning, von der anfänglichen Modellquantifizierung bis zur aktuellen Effizienzoptimierung von leichtgewichtigen Netzen. Die Verbesserung der Effizienz von NNs ist mein Ziel.  Dazu muss man manchmal Hunderte von Modellen auf verschiedenen Datensätzen trainieren und testen. Als Absolvent habe ich zwar nur begrenzte Erfahrungen, bin aber mehr als bereit, ständig weiter zu lernen. Ich bin derzeit auf der Suche nach einer inspirierenden Arbeitsumgebung, die es mir ermöglicht, durch gute Teamarbeit zu wachsen und gleichzeitig meine eigenen Beiträge zu verwirklichen."; 
     
+    document.getElementById("PI").innerHTML = "Seit meinem Masterstudium beschäftige ich mich mit Deep Learning, von der anfänglichen Modellquantifizierung bis zur aktuellen Effizienzoptimierung von leichtgewichtigen Netzen. Die Verbesserung der Effizienz von NNs ist mein Ziel.  Dazu muss man manchmal Hunderte von Modellen auf verschiedenen Datensätzen trainieren und testen. Als Absolvent habe ich zwar nur begrenzte Erfahrungen, bin aber mehr als bereit, ständig weiter zu lernen. Ich bin derzeit auf der Suche nach einer inspirierenden Arbeitsumgebung, die es mir ermöglicht, durch gute Teamarbeit zu wachsen und gleichzeitig meine eigenen Beiträge zu verwirklichen."; 
+
 };
 function My_Experience() 
 {
@@ -134,19 +198,21 @@ function My_Education()
 function My_Kompetenzen()
 {
     document.getElementById("PS").innerHTML = "Programmier-Tools: Python(Pytorch)/MatLab(Simulink)/C++/JavaScript(HTML)";
-    document.getElementById("PS").style.color = "green";
+    document.getElementById("PS").style.color = "Black";
     document.getElementById("PS").style.fontWeight="Bold";
     document.getElementById("OT").innerHTML = "Office-Tools: Microsoft Office/Latex";
-    document.getElementById("OT").style.color = "green";
+    document.getElementById("OT").style.color = "Black";
     document.getElementById("OT").style.fontWeight="Bold";
     document.getElementById("LT").innerHTML = "Sprache-Tools: Chinesisch/Deutsch/English";
-    document.getElementById("LT").style.color = "green";
+    document.getElementById("LT").style.color = "Black";
     document.getElementById("LT").style.fontWeight="Bold";
 
 }
 
 function Hide_AI_And_Me() 
-{document.getElementById("PI").innerHTML = "";}
+{
+    document.getElementById("PI").innerHTML = "";
+}
 
 
 function Hide_My_Experience()
