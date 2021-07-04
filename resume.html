@@ -28,6 +28,13 @@ h2
             text-align:end;
 }
 
+h3
+{
+            color:white;
+            font-size:10px;
+            text-align:start;
+}
+
 #p_1
 {
             font-family:"Times New Roman";
@@ -334,21 +341,7 @@ function Hide_My_Kompetenzen()
     render() {
       return (
         <div>
-          <h2>Local-Time: {this.state.date.toLocaleTimeString()}.</h2>
-        </div>
-      );
-    }
-  }
-  
-  ReactDOM.render(
-    <Clock />,
-    document.getElementById('time')
-  );
-  </script>
-
-</body>
-</html>
-© 2021 GitHub, Inc.
+          <h3>© 2021 GitHub, Inc.
 Terms
 Privacy
 Security
@@ -359,4 +352,19 @@ Pricing
 API
 Training
 Blog
-About
+About</h3>
+          <h2>Local-Time: {this.state.date.toLocaleTimeString()}.</h2>
+        </div>
+      );
+    }
+  }
+  
+  ReactDOM.render(
+    <Clock />,
+
+    document.getElementById('time')
+  );
+  </script>
+
+</body>
+</html>
