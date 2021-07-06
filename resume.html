@@ -11,10 +11,9 @@
 <head>
 
 <style>
-body
-{
-            background-color:gray;
-}
+
+
+
 h1
 {
             color:black;
@@ -30,7 +29,7 @@ h2
 
 h3
 {
-            color:white;
+            color:black;
             font-size:10px;
             text-align:start;
 }
@@ -40,15 +39,16 @@ h3
             font-family:"Times New Roman";
             font-size:30px;
             font-Weight:Bold;
+            color:black;
 }
 #p_2
 {
             font-family:"Times New Roman";
             font-size:20px;
             font-Weight:Bold;
-            color:hsla(hue, saturation, lightness, alpha);
+            color:black;
             position:relative;
-            left: 650px;
+            left: 660px;
 }
 .polaroid {
   width: 250px;
@@ -71,14 +71,14 @@ h3
 button 
 {
     position:relative;
-    background-color: #4CAF50; /* Green */
+    background-color: rgb(39, 36, 36); /* black */
     border: none;
-    color: white;
+    color:white;
     padding: 15px 35px;
     text-align: center;
-    text-decoration: none;
+    text-decoration: blink;
     display: inline-block;
-    font-size:12px;
+    font-size:18px;
     font-Weight:Bold;
     width: 24%;
     left: 20px;
@@ -88,7 +88,7 @@ button
 #img_1 { 
     width: 10%;
     height: auto;
-    opacity: 0.8;
+    opacity: 1;
     position:relative;
     border-radius: 50%;
 }
@@ -99,10 +99,33 @@ button
     opacity: 0.8;
     position:relative;
     left: 650px;
+    
 }
+
+#web_bg {
+  position:fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height:100%;
+  min-width: 1000px;
+  z-index:-10;
+  zoom: 1;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-position: center 0;
+}
+
 </style>
 
 <body>
+
+<div class="wrapper">
+    <div id="web_bg" style="background-image: url(https://pic35.photophoto.cn/20150613/0008020282906720_b.jpg);"></div>
+</div>
 
 <h1>Ciao! Welcome to my resume</h1>
 
@@ -135,7 +158,6 @@ button
 
 <button onclick="Hide_My_Experience()">Hide_My_Experience</button>
 <button onclick="Hide_My_Kompetenzen()">Hide_Kompetenzen</button>
-
 
 
 
@@ -330,6 +352,13 @@ function Hide_My_Kompetenzen()
   </div>
 
 
+  <div class="row map">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109509.08903544114!2d117.75283559759238!3d30.93812261553811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x343492c995b9080d%3A0xaa09ff3c88cb68cc!2sTongling%2C%20Anhui%2C%20China!5e0!3m2!1sde!2sde!4v1625596996349!5m2!1sde!2sde" width="200" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div> 
+</div>
+
+
   <div id="time"></div>
   <script type="text/babel">
   class Clock extends React.Component {
@@ -341,18 +370,7 @@ function Hide_My_Kompetenzen()
     render() {
       return (
         <div>
-          <h3>© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About</h3>
+          <h3>© 2021 GitHub, https://github.com/kai-pixel</h3>
           <h2>Local-Time: {this.state.date.toLocaleTimeString()}.</h2>
         </div>
       );
@@ -367,4 +385,91 @@ About</h3>
   </script>
 
 </body>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>　
+<script>
+!
+function() {
+    function n(n, e, t) {
+        return n.getAttribute(e) || t
+    }
+    function e(n) {
+        return document.getElementsByTagName(n)
+    }
+    function t() {
+        var t = e("script"),
+        o = t.length,
+        i = t[o - 1];
+        return {
+            l: o,
+            z: n(i, "zIndex", -1),
+            o: n(i, "opacity", .5),
+            c: n(i, "color", "0,0,0"),
+            n: n(i, "count", 99)
+        }
+    }
+    function o() {
+        a = m.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+        c = m.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+    }
+    function i() {
+        r.clearRect(0, 0, a, c);
+        var n, e, t, o, m, l;
+        s.forEach(function(i, x) {
+            for (i.x += i.xa, i.y += i.ya, i.xa *= i.x > a || i.x < 0 ? -1 : 1, i.ya *= i.y > c || i.y < 0 ? -1 : 1, r.fillRect(i.x - .5, i.y - .5, 1, 1), e = x + 1; e < u.length; e++) n = u[e],
+            null !== n.x && null !== n.y && (o = i.x - n.x, m = i.y - n.y, l = o * o + m * m, l < n.max && (n === y && l >= n.max / 2 && (i.x -= .03 * o, i.y -= .03 * m), t = (n.max - l) / n.max, r.beginPath(), r.lineWidth = t / 2, r.strokeStyle = "rgba(" + d.c + "," + (t + .2) + ")", r.moveTo(i.x, i.y), r.lineTo(n.x, n.y), r.stroke()))
+        }),
+        x(i)
+    }
+    var a, c, u, m = document.createElement("canvas"),
+    d = t(),
+    l = "c_n" + d.l,
+    r = m.getContext("2d"),
+    x = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+    function(n) {
+        window.setTimeout(n, 1e3 / 45)
+    },
+    w = Math.random,
+    y = {
+        x: null,
+        y: null,
+        max: 2e4
+    };
+    m.id = l,
+    m.style.cssText = "position:fixed;top:0;left:0;z-index:" + d.z + ";opacity:" + d.o,
+    e("body")[0].appendChild(m),
+    o(),
+    window.onresize = o,
+    window.onmousemove = function(n) {
+        n = n || window.event,
+        y.x = n.clientX,
+        y.y = n.clientY
+    },
+    window.onmouseout = function() {
+        y.x = null,
+        y.y = null
+    };
+    for (var s = [], f = 0; d.n > f; f++) {
+        var h = w() * a,
+        g = w() * c,
+        v = 2 * w() - 1,
+        p = 2 * w() - 1;
+        s.push({
+            x: h,
+            y: g,
+            xa: v,
+            ya: p,
+            max: 6e3
+        })
+    }
+    u = s.concat([y]),
+    setTimeout(function() {
+        i()
+    },
+    100)
+} ();
+</script>
+</html>
+
+
 </html>
